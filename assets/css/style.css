@@ -67,3 +67,50 @@ h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.25; margin: 8px 0 20px;
   .tool-card p { min-height: 0; }
   .about-panel { flex-direction: column; align-items: flex-start; padding: 23px; }
 }
+
+/* 工具頁共用樣式：新增頁面請沿用既有元件 */
+.tool-open { display:inline-block; margin:0 12px 10px 0; color:var(--blue-deep); font-weight:800; text-underline-offset:4px; }
+.status-ready { color:#116d49; background:#e2f7eb; }
+.tool-intro { padding-block:38px 16px; }
+.back-link { display:inline-block; margin-bottom:18px; font-weight:750; color:var(--blue-deep); text-decoration:none; }
+.back-link:hover { text-decoration:underline; }
+.tool-intro h1 { margin:6px 0 13px; }
+.tool-intro .lead { color:var(--muted); font-size:1.05rem; margin:0; }
+.tool-columns { display:grid; grid-template-columns: 1fr 1fr; gap:18px; margin-block:23px 30px; }
+.info-panel, .work-panel, .task-panel { background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:24px; box-shadow:0 7px 18px #2546590a; }
+.info-panel h2,.work-panel h2 { font-size:1.2rem; margin:0 0 10px; }
+.info-panel p,.info-panel ol { margin:0; color:var(--muted); }
+.info-panel ol { padding-left:1.4rem; }
+.work-section { padding-bottom:68px; }
+.work-panel { margin-bottom:20px; }
+.field-label { display:block; font-weight:750; margin:0 0 7px; }
+.input-row { display:flex; gap:12px; align-items:stretch; }
+.text-input { min-width:0; flex:1; width:100%; border:2px solid var(--border); border-radius:14px; padding:12px 14px; font:inherit; color:var(--ink); background:white; }
+.text-input:focus-visible { outline:3px solid #f5c84c; outline-offset:2px; }
+.action-button { appearance:none; border:none; font:inherit; font-weight:800; border-radius:14px; padding:12px 20px; cursor:pointer; color:white; background:var(--blue); }
+.action-button:hover { background:var(--blue-deep); }
+.action-button:focus-visible,.secondary-button:focus-visible { outline:3px solid var(--red); outline-offset:3px; }
+.secondary-button { appearance:none; background:white; border:1px solid var(--border); border-radius:12px; font:inherit; font-weight:700; color:var(--blue-deep); padding:7px 12px; cursor:pointer; }
+.secondary-button:hover { background:#eaf6fc; }
+.danger-button { color:#ab3434; }
+.help-text { color:var(--muted); font-size:.9rem; margin:9px 0 0; }
+.message { min-height:1.5em; margin:8px 0 0; color:var(--blue-deep); font-weight:650; }
+.task-stack { display:grid; gap:18px; }
+.task-panel { padding:24px; }
+.task-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:15px; }
+.task-heading h3 { margin:0; font-size:1.15rem; }
+.task-actions { display:flex; flex-wrap:wrap; gap:7px; }
+.progress-line { height:11px; border-radius:99px; overflow:hidden; background:#e5f1f7; margin:10px 0 5px; }
+.progress-fill { height:100%; background:var(--blue); transition:width .2s ease; width:0; }
+.progress-caption { color:var(--muted); font-size:.88rem; margin:0 0 14px; }
+.step-list { list-style:none; padding:0; margin:12px 0; display:grid; gap:9px; }
+.step-item { display:flex; flex-wrap:wrap; align-items:center; gap:10px; background:#f5fbff; padding:10px 12px; border-radius:12px; }
+.step-item input[type=checkbox] { width:19px; height:19px; accent-color:var(--blue); cursor:pointer; }
+.step-text { flex:1; overflow-wrap:anywhere; }
+.step-item.done .step-text { text-decoration:line-through; color:var(--muted); }
+.step-form { display:flex; gap:9px; margin-top:15px; }
+.step-form .text-input { padding:10px 12px; }
+.empty-state { padding:30px 18px; border:2px dashed var(--border); border-radius:var(--radius); text-align:center; color:var(--muted); background:#fbfdff; }
+.empty-state p { margin:0; }
+@media (max-width:720px) { .tool-columns { grid-template-columns:1fr; } .task-heading { flex-direction:column; } }
+@media (max-width:560px) { .input-row,.step-form { flex-direction:column; } .action-button { width:100%; } .task-panel,.work-panel,.info-panel { padding:18px; } }

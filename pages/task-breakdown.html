@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="拖延百寶袋任務拆解工具：將大任務拆成可完成的小步驟，記錄進度。">
+  <title>任務拆解 | 拖延百寶袋</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/tools/task-breakdown.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="拖延百寶袋首頁"><span class="brand-icon" aria-hidden="true">◕</span>拖延百寶袋</a>
+      <nav aria-label="主要導覽"><a href="../index.html#tools">探索工具</a><a href="../index.html#about">關於百寶袋</a></nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="tool-intro" aria-labelledby="tool-title">
+      <a class="back-link" href="../index.html#tools">← 返回工具箱</a>
+      <p class="eyebrow">百寶袋道具 01 · 可以使用</p>
+      <h1 id="tool-title">任務拆解</h1>
+      <p class="lead">任務看起來太大？先把它拆成一小步、一小步，完成多少都算進步！</p>
+    </section>
+    <section class="tool-columns" aria-label="工具說明">
+      <div class="info-panel"><h2>什麼時候適合使用？</h2><p>當你面對期末報告、整理房間或其他大任務，覺得不知道從哪裡開始時。</p></div>
+      <div class="info-panel"><h2>怎麼使用？</h2><ol><li>輸入一項主要任務。</li><li>為任務新增能夠執行的小步驟。</li><li>每完成一項就勾選，進度會自動更新。</li></ol></div>
+    </section>
+    <section class="work-section" aria-labelledby="workspace-title">
+      <div class="work-panel">
+        <h2 id="workspace-title">開始拆解你的任務</h2>
+        <form id="task-form" novalidate>
+          <label class="field-label" for="task-name">今天想完成什麼？</label>
+          <div class="input-row"><input class="text-input" id="task-name" name="task-name" maxlength="100" placeholder="例如：完成期末報告" required><button class="action-button" type="submit">新增任務</button></div>
+        </form>
+        <p class="help-text">新增任務後，可以自己加入小步驟。資料會保存在這台裝置的瀏覽器中。</p>
+        <p class="message" id="feedback" role="status" aria-live="polite"></p>
+      </div>
+      <div id="task-list" class="task-stack" aria-live="off"></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container">拖延百寶袋 · 先開始，就有新的可能</div></footer>
+</body>
+</html>
